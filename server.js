@@ -159,14 +159,14 @@ function makeCriticalResponse(request, response, err) {
 }
 
 function findViableFilePath(requestPath, callback) {
-	let requestedFsFilename = getFilePath(requestPath)
-	fs.stat(requestedFsFilename, checkTheRequestedFilename)
+	let requestedFilename = getFilePath(requestPath)
+	fs.stat(requestedFilename, checkTheRequestedFilename)
 	function checkTheRequestedFilename(err, stats) {
 		if (err) callback()
-		else if (stats.isFile()) callback(null, requestedFsFilename)
+		else if (stats.isFile()) callback(null, requestedFilename)
 		else if (stats.isDirectory()) {
-			requestedFsFilename = path.resolve(requestedFsFilename, indexFilename)
-			fs.stat(requestedFsFilename, checkTheRequestedFilename)
+			requestedFilename = path.resolve(requestedFilename, indexFilename)
+			fs.stat(requestedFilename, checkTheRequestedFilename)
 		}
 		else callback()
 	}
