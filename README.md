@@ -4,7 +4,7 @@ Static site server with auto-reload for developing good ol' client-side apps.
 
 ## How to use
 
-Start the serer with:
+Start the server with:
 
 `node server.js`
 
@@ -42,7 +42,7 @@ There is no compression. Also intentional. You don't need it locally, and
 makes it a bit easier to spot big payloads.
 
 There is no support for client-side routing that uses URL paths, rather than
-hashes. In 2020's (and later) I think you shouldn't be doing if you're not
+hashes. In 2020's (and later) I think you shouldn't be doing it if you're not
 also doing SSR. Don't bother with a PR.
 
 Colorful logging. This crap was developed using Notepad. Not Notepad++, just
