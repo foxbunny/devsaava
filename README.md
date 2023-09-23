@@ -4,9 +4,15 @@ Static site server with auto-reload for developing good ol' client-side apps.
 
 ## How to use
 
-Start the serer with node server.js.
+Start the serer with:
+
+`node server.js`
 
 Seriously, it's just one file. You don't need NPM.
+
+## Dependencies
+
+None.
 
 ## Options
 
